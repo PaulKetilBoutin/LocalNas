@@ -34,7 +34,7 @@ def return_doc(item_path):
 async def create_upload_file(file: UploadFile):
     try:
         with open("/home/corino/NAS/"+file.filename, 'wb') as f:
-            while contents := file.file.read(1024 * 1024):
+            while contents := file.file.read(1024 * 1024 * 50):
                 f.write(contents)
     except Exception as e:
         return {"message": e.args}
