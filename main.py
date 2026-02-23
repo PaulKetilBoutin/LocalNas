@@ -14,7 +14,7 @@ def read_root():
 def read_items():
     disp = "<html><body><ul>"
     for i in listdir("/home/corino/NAS/"):
-        disp += "<li><a href='/dowloads/"+i+"'>"+i+"</a></li>"
+        disp += "<li><a href='/dowloads/"+i+"' download='"+i"'>"+i+"</a></li>"
     disp += "</ul>"
     disp += """<form action='/uploadfile/' method='post' enctype='multipart/form-data'>
     Select file to upload:
